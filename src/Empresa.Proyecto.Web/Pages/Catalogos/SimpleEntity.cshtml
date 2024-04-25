@@ -28,21 +28,35 @@
 
 @section Scripts{
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#entities').DataTable({
                 "ajax": {
                     url: "?handler=Catalog",
                     type: 'POST',
                     headers: { 'RequestVerificationToken': $('@Html.AntiForgeryToken()').val() }
                 },
-                columns:[
-                    { data: 'Name'},
+                columns: [
+                    { data: 'Id' },
+                    { data: 'Name' },
                     { data: 'Value' },
-                    { data: 'Created' },
-                    { data: 'Modified'}
+                    {
+                        data: 'Created',
+                        render: function (data) {
+                            // Formatear la fecha a dd/MM/yyyy
+                            return moment(data).format('DD/MM/YYYY');
+                        }
+                    },
+                    {
+                        data: 'Modified',
+                        render: function (data) {
+                            // Formatear la fecha a dd/MM/yyyy
+                            return moment(data).format('DD/MM/YYYY');
+                        }
+                    }
                 ]
             });
-        })
+        });
+
     </script>
 }
 
