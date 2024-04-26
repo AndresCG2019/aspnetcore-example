@@ -45,6 +45,11 @@ namespace Empresa.Proyecto.Infra.Data
             return await _dbContext.Set<T>().ToListAsync();
         }
 
+        public IReadOnlyList<T> ListAll()
+        {
+            return _dbContext.Set<T>().ToList();
+        }
+
         /// <summary>
         /// Agrega una Entidad al repositorio
         /// </summary>

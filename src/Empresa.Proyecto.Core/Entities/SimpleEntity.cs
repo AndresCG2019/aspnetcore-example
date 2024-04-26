@@ -17,7 +17,8 @@ namespace Empresa.Proyecto.Core.Entities
         // y si se permite nulo o siempre deberia traer valor
 
         public string Name { get; set; } = null!;
-        public string? Value { get; set; } 
-        
+        public string? Value { get; set; }
+        public List<NewEntity> NewEntities { get; set; }
+
     }
 }

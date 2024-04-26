@@ -8,5 +8,6 @@
     {
         public string Nombre { get; set; } = null!;
         public SimpleEntity Opcion { get; set; } = null!;
+        public int IdOpcion { get; set; }
     }
 }

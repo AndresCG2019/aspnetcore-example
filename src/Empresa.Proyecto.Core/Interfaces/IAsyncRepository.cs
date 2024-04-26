@@ -29,6 +29,12 @@ namespace Empresa.Proyecto.Core.Interfaces
         Task<IReadOnlyList<T>> ListAllAsync();
 
         /// <summary>
+        /// Listado de todos los elementos del repositorio
+        /// </summary>
+        /// <returns>Lista solo lectura de elementos</returns>
+        IReadOnlyList<T> ListAll();
+
+        /// <summary>
         /// Listado de los elementos del repositorio filtrados por una condicion
         /// </summary>
         /// <param name="spec">Especificacion para filtarar u ordenar los elementos</param>

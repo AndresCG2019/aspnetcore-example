@@ -24,6 +24,7 @@ namespace Empresa.Proyecto.Web.Pages
             var spec = new SimpleEntityAlphabeticalOrderSpecification();
 
             var catalog = await Repo.ListAsync(spec);
+
             return new JsonResult(new { data = catalog });
         }
     }
