@@ -17,9 +17,10 @@ namespace Empresa.Proyecto.Core.Specifications
         /// Esta especificacion recibe un parametro y aplica un filtro. 
         /// Tambine se definen configuraciones auxiliares como Includes, orders y paginacion
         /// </summary>
-        public SimpleEntityAlphabeticalOrderSpecification() 
+        public SimpleEntityAlphabeticalOrderSpecification(int skip, int take) 
         {
             ApplyOrderBy(c => c.Name);
+            ApplyPaging(skip, take);
         }
     }
 }

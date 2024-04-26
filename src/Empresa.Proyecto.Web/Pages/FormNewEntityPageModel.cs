@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Empresa.Proyecto.Core.Entities;
 using Empresa.Proyecto.Core.Interfaces;
-using Empresa.Proyecto.Core.Specifications;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Empresa.Proyecto.Web.Pages
@@ -38,7 +37,6 @@ namespace Empresa.Proyecto.Web.Pages
 
         public async Task<IActionResult> OnPost(string nombre)
         {
-
             NewEntity registro = new NewEntity() {Created = DateTime.Now, Modified = DateTime.Now, Nombre = nombre, IdOpcion = IdOpcion};
 
             await Repo.AddAsync(registro);

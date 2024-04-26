@@ -30,6 +30,8 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#entities').DataTable({
+                proccessing: true,
+                serverSide: true,
                 "ajax": {
                     url: "?handler=Catalog",
                     type: 'POST',

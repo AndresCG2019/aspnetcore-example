@@ -50,6 +50,11 @@ namespace Empresa.Proyecto.Infra.Data
             return _dbContext.Set<T>().ToList();
         }
 
+        public async Task<int> CountAsync() 
+        {
+            return await _dbContext.Set<T>().CountAsync();
+        }
+
         /// <summary>
         /// Agrega una Entidad al repositorio
         /// </summary>

@@ -41,6 +41,11 @@ namespace Empresa.Proyecto.Core.Interfaces
         /// <returns>Lista solo lectura de elementos</returns>
         Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec);
 
+        /// <summary>
+        /// Obtiene el numero de registros de una tabla
+        /// </summary>
+        /// <returns>Número de registros</returns>
+        Task<int> CountAsync();
 
         /// <summary>
         /// Agregar entidad al repositorio
